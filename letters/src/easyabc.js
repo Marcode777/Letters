@@ -11,6 +11,9 @@ export default class EasyABC extends React.Component{
                 A
               </div>
             </div>
+            <div className="button">
+              <a href="#" className="">Previous</a>
+            </div>
           </div>
         </div>
       );
