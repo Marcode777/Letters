@@ -12,7 +12,9 @@ export default class EasyABC extends React.Component{
               </div>
             </div>
             <div className="button">
-              <a href="#" className="">Previous</a>
+              <a href="#" className="button prev">Previous</a>
+              <a href="#" className="button sound"> Play Sound</a>
+              <a href="#" className="button next">Next</a>
             </div>
           </div>
         </div>
