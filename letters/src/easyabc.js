@@ -18,8 +18,16 @@ export default class EasyABC extends React.Component{
             </div>
             <div className="fields">
               <div className="field-block">
-                <div className="left-field">A</div>
-                <div className="right-field">A</div>
+                <div className="left-field">
+                  <div className="placeholder-span">
+                    Click Next to View Image
+                  </div>
+                </div>
+                <div className="right-field">
+                  <div className="placeholder-span">
+                    Click Next to View the Spelling
+                  </div>
+                </div>
               </div>
             </div>
           </div>
