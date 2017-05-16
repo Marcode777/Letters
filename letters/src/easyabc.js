@@ -1,14 +1,24 @@
 import React from 'react';
 import './App.css';
+import alphabets from './alphabets.json';
 
 export default class EasyABC extends React.Component{
+
+  constructor(){
+    super()
+    this.state = {
+      alphabets: alphabets,
+      currentPosition: 0
+    }
+  }
+
   render(){
     return(
         <div className="game">
           <div className="option">
             <div className="fields">
               <div className="field-block">
-                A
+                {this.state.alphabets[this.state.currentPosition].letter}
               </div>
             </div>
             <div className="button">
@@ -22,6 +32,7 @@ export default class EasyABC extends React.Component{
                   <div className="placeholder-span">
                     Click Next to View Image
                   </div>
+                    <img src={this.state.alphabets[this.state.currentPosition].image}/>
                 </div>
                 <div className="right-field">
                   <div className="placeholder-span">
