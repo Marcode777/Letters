@@ -22,20 +22,20 @@ export default class EasyABC extends React.Component{
               </div>
             </div>
             <div className="button">
-              <a href="#" className="button prev">Previous</a>
-              <a href="#" className="button sound"> Play Sound</a>
-              <a href="#" className="button next">Next</a>
+              <a className="button prev">Previous</a>
+              <a className="button sound"> Play Sound</a>
+              <a className="button next">Next</a>
             </div>
             <div className="fields">
               <div className="field-block">
                 <div className="left-field">
-                  <div className="placeholder-span">
+                  <div className="placeholder-span hide">
                     Click Next to View Image
                   </div>
                     <img className="letter-image" alt={this.state.alphabets[this.state.currentPosition].word} src={this.state.alphabets[this.state.currentPosition].image}/>
                 </div>
                 <div className="right-field">
-                  <div className="placeholder-span">
+                  <div className="placeholder-span hide" >
                     Click Next to View the Spelling
                   </div>
                   <div className="word">
