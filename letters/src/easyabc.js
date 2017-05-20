@@ -10,6 +10,11 @@ export default class EasyABC extends React.Component{
       alphabets: alphabets,
       currentPosition: 0
     }
+    this.next = this.next.bind(this);
+  }
+
+  next(){
+
   }
 
   render(){
@@ -24,7 +29,7 @@ export default class EasyABC extends React.Component{
             <div className="button">
               <a className="button prev">Previous</a>
               <a className="button sound"> Play Sound</a>
-              <a className="button next">Next</a>
+              <a className="button next" onClick="{this.next}">Next</a>
             </div>
             <div className="fields">
               <div className="field-block">
