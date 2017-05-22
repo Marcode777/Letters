@@ -8,13 +8,19 @@ export default class EasyABC extends React.Component{
     super()
     this.state = {
       alphabets: alphabets,
-      currentPosition: 0
+      currentPosition: 0,
+      currentTick: 0
     }
     this.next = this.next.bind(this);
   }
 
   next(){
     console.log("next button clicked");
+    if(this.state.currentTick < 2){
+      this.setState({
+        currentTick: this.state.currentTick + 1
+      })
+    }
     this.setState({
       currentPosition: this.state.currentPosition + 1
     })
