@@ -20,10 +20,13 @@ export default class EasyABC extends React.Component{
       this.setState({
         currentTick: this.state.currentTick + 1
       })
-    }
-    this.setState({
-      currentPosition: this.state.currentPosition + 1
+    } else {
+        this.setState({
+          currentPosition: this.state.currentPosition + 1,
+          currentTick: 0
     })
+  }
+
   }
 
   render(){
