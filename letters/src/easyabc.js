@@ -15,7 +15,7 @@ export default class EasyABC extends React.Component{
   }
 
   next(){
-    console.log("next button clicked");
+    console.log("the next button was clicked");
     if(this.state.currentTick < 2){
       this.setState({
         currentTick: this.state.currentTick + 1
