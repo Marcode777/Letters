@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import alphabets from './alphabets.json';
+import classNames from 'classnames';
 
 export default class EasyABC extends React.Component{
 
@@ -30,6 +31,8 @@ export default class EasyABC extends React.Component{
   }
 
   render(){
+    let showImage = this.state.currentTick !== 0 ? true : false;
+    console.log(this.state.currentTick, showImage);
     return(
         <div className="game">
           <div className="option">
