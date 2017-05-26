@@ -32,6 +32,7 @@ export default class EasyABC extends React.Component{
 
   render(){
     let showImage = this.state.currentTick !== 0 ? true : false;
+    let showWord = this.state.currentTick === 2 ? true : false;
     console.log(this.state.currentTick, showImage);
     return(
         <div className="game">
@@ -49,16 +50,16 @@ export default class EasyABC extends React.Component{
             <div className="fields">
               <div className="field-block">
                 <div className="left-field">
-                  <div className="placeholder-span hide">
+                  <div className={classNames('placeholder-span', {hide: showImage})}>
                     Click Next to View Image
                   </div>
-                    <img className="letter-image" alt={this.state.alphabets[this.state.currentPosition].word} src={this.state.alphabets[this.state.currentPosition].image}/>
+                    <img className={classNames('letter-image', {hide: !showImage})} alt={this.state.alphabets[this.state.currentPosition].word} src={this.state.alphabets[this.state.currentPosition].image}/>
                 </div>
                 <div className="right-field">
-                  <div className="placeholder-span hide" >
+                  <div className={classNames('placeholder-span', {hide: showWord})} >
                     Click Next to View the Spelling
                   </div>
-                  <div className="word">
+                  <div className={classNames('word', {hide: !showWord})}>
                     {this.state.alphabets[this.state.currentPosition].word}
                   </div>
                 </div>
