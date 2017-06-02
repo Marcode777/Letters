@@ -32,6 +32,9 @@ export default class EasyABC extends React.Component{
 
   prev(){
     console.log("the previos button was clicked");
+    this.setState({
+      currentPosition: this.state.currentPosition-1
+    })
   }
 
   render(){
