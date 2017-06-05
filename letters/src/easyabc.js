@@ -32,9 +32,15 @@ export default class EasyABC extends React.Component{
 
   prev(){
     console.log("the previos button was clicked");
-    this.setState({
+    if(this.state.currentPosition > 0){
+      this.setState({
       currentPosition: this.state.currentPosition-1
+    });
+    } else {
+      this.setState({
+      currentPosition: 25
     })
+    }
   }
 
   render(){
