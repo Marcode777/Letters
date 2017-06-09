@@ -55,8 +55,8 @@ export default class EasyABC extends React.Component{
                 {this.state.alphabets[this.state.currentPosition].letter}
               </div>
             </div>
-             The Current Position:{this.state.currentPosition}<br/>
-            The Current Tick:{this.state.currentTick}
+             The Current Position Is:{this.state.currentPosition}<br/>
+            The Current Tick Is:{this.state.currentTick}
             <div className="button">
               <a className="button prev" onClick={this.prev}>Previous</a>
               <a className="button sound"> Play Sound</a>
