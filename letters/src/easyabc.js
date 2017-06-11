@@ -38,7 +38,7 @@ export default class EasyABC extends React.Component{
     });
     } else {
       this.setState({
-      currentPosition: 25
+      currentPosition: this.state.alphabets.length
     })
     }
   }
