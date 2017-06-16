@@ -31,7 +31,7 @@ export default class EasyABC extends React.Component{
   }
 
   prev(){
-    console.log("the previous button was clicked");
+    console.log("the previous button has been clicked");
     if(this.state.currentPosition > 0){
       this.setState({
       currentPosition: this.state.currentPosition-1
