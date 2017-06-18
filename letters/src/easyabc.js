@@ -17,17 +17,23 @@ export default class EasyABC extends React.Component{
   }
 
   next(){
-    if(this.state.currentTick < 2){
+    if(this.state.currentPosition === this.state.alphabets.length){
       this.setState({
-        currentTick: this.state.currentTick + 1
-      })
+          currentPosition: 0,
+          currentTick: 0
+    })
+     } else {
+        if(this.state.currentTick < 2){
+        this.setState({
+          currentTick: this.state.currentTick + 1
+        })
     } else {
         this.setState({
           currentPosition: this.state.currentPosition + 1,
           currentTick: 0
-    })
-  }
-
+        })
+      }
+    }
   }
 
   prev(){
@@ -55,8 +61,8 @@ export default class EasyABC extends React.Component{
                 {this.state.alphabets[this.state.currentPosition].letter}
               </div>
             </div>
-             Current Position Is:{this.state.currentPosition}<br/>
-             Current Tick Is:{this.state.currentTick}
+             The Current Position Is:{this.state.currentPosition}<br/>
+             The Current Tick Is:{this.state.currentTick}
             <div className="button">
               <a className="button prev" onClick={this.prev}>Previous</a>
               <a className="button sound"> Play Sound</a>
