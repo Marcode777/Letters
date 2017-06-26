@@ -17,6 +17,7 @@ export default class EasyABC extends React.Component{
   }
 
   next(){
+    console.log(this.state.currentPosition, this.state.currentTick);
     if(this.state.currentPosition === this.state.alphabets.length){
       this.setState({
           currentPosition: 0,
